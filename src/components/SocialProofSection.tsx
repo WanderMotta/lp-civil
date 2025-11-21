@@ -15,7 +15,7 @@ const stats = [
   },
   {
     icon: Shield,
-    value: "Êxito",
+    value: "ONLINE",
     label: "100% Online"
   },
   {
