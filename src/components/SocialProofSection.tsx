@@ -37,7 +37,7 @@ const testimonials = [
     rating: 5
   },
   {
-    name: "Ana Costa",
+    name: "Eduardo Medeiros",
     text: "Realizaram meu inventário de forma ágil e eficiente. Equipe muito profissional e transparente em todo o processo.",
     rating: 5
   }
