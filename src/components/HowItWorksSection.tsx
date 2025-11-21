@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, FileSearch, Scale } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const steps = [
   {
@@ -23,12 +24,19 @@ const steps = [
 ];
 
 const HowItWorksSection = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999", "_blank");
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section 
+      ref={ref}
+      className={`py-20 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

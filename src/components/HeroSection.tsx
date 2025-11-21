@@ -1,14 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Shield, Clock, Lock } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const HeroSection = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.2 });
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999", "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 bg-gradient-to-b from-secondary/30 to-background">
+    <section 
+      ref={ref}
+      className={`relative min-h-screen flex items-center pt-20 bg-gradient-to-b from-secondary/30 to-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

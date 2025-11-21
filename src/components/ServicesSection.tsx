@@ -10,6 +10,7 @@ import {
   FileSignature,
   Gift
 } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const services = [
   {
@@ -65,8 +66,16 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+
   return (
-    <section id="services" className="py-20 bg-background">
+    <section 
+      id="services" 
+      ref={ref}
+      className={`py-20 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
