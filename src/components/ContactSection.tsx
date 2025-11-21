@@ -3,21 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, Lock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-
 const ContactSection = () => {
-  const { toast } = useToast();
-  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  const {
+    toast
+  } = useToast();
+  const {
+    ref,
+    isVisible
+  } = useIntersectionObserver({
+    threshold: 0.1
+  });
   const [formData, setFormData] = useState({
     name: "",
     whatsapp: "",
@@ -25,10 +25,9 @@ const ContactSection = () => {
     caseType: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.whatsapp || !formData.caseType) {
       toast({
@@ -42,12 +41,10 @@ const ContactSection = () => {
     // Create WhatsApp message
     const message = `Olá! Meu nome é ${formData.name}.\n\nTipo de caso: ${formData.caseType}\n\n${formData.message}\n\nE-mail: ${formData.email}`;
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
-    
     window.open(whatsappUrl, "_blank");
-    
     toast({
       title: "Redirecionando...",
-      description: "Você será direcionado para o WhatsApp.",
+      description: "Você será direcionado para o WhatsApp."
     });
 
     // Reset form
@@ -59,15 +56,7 @@ const ContactSection = () => {
       message: ""
     });
   };
-
-  return (
-    <section 
-      id="contact" 
-      ref={ref}
-      className={`py-20 bg-secondary/30 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
+  return <section id="contact" ref={ref} className={`py-20 bg-secondary/30 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -84,41 +73,34 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome completo *</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Seu nome completo"
-                    required
-                  />
+                  <Input id="name" value={formData.name} onChange={e => setFormData({
+                  ...formData,
+                  name: e.target.value
+                })} placeholder="Seu nome completo" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="whatsapp">WhatsApp *</Label>
-                  <Input
-                    id="whatsapp"
-                    type="tel"
-                    value={formData.whatsapp}
-                    onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                    placeholder="(11) 99999-9999"
-                    required
-                  />
+                  <Input id="whatsapp" type="tel" value={formData.whatsapp} onChange={e => setFormData({
+                  ...formData,
+                  whatsapp: e.target.value
+                })} placeholder="(11) 99999-9999" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">E-mail</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="seu@email.com"
-                  />
+                  <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                  ...formData,
+                  email: e.target.value
+                })} placeholder="seu@email.com" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="caseType">Tipo de caso *</Label>
-                  <Select value={formData.caseType} onValueChange={(value) => setFormData({ ...formData, caseType: value })}>
+                  <Select value={formData.caseType} onValueChange={value => setFormData({
+                  ...formData,
+                  caseType: value
+                })}>
                     <SelectTrigger>
                       <SelectValue placeholder="Selecione o tipo de caso" />
                     </SelectTrigger>
@@ -139,13 +121,10 @@ const ContactSection = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Mensagem</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Descreva brevemente seu caso..."
-                    rows={4}
-                  />
+                  <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                  ...formData,
+                  message: e.target.value
+                })} placeholder="Descreva brevemente seu caso..." rows={4} />
                 </div>
 
                 <Button type="submit" variant="whatsapp" size="lg" className="w-full">
@@ -184,10 +163,7 @@ const ContactSection = () => {
                     <p className="text-sm text-muted-foreground mb-3">
                       Nossa equipe responde rapidamente para avaliar seu caso e oferecer as melhores soluções.
                     </p>
-                    <a 
-                      href="tel:5511999999999" 
-                      className="text-sm font-medium text-primary hover:underline"
-                    >
+                    <a href="tel:5511999999999" className="text-sm font-medium text-primary hover:underline">
                       (11) 99999-9999
                     </a>
                   </div>
@@ -206,11 +182,8 @@ const ContactSection = () => {
                     <p className="text-sm text-muted-foreground mb-3">
                       Prefere enviar um e-mail? Entre em contato conosco:
                     </p>
-                    <a 
-                      href="mailto:contato@direitocivil.com.br" 
-                      className="text-sm font-medium text-primary hover:underline"
-                    >
-                      contato@direitocivil.com.br
+                    <a className="text-sm font-medium text-primary hover:underline" href="mailto:contato@seuadvogado.com.br">
+                      contato@seuadvogadoja.com.br
                     </a>
                   </div>
                 </div>
@@ -219,8 +192,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
