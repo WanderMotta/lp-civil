@@ -33,21 +33,21 @@ const HowItWorksSection = () => {
   return (
     <section 
       ref={ref}
-      className={`py-20 bg-background transition-all duration-1000 ${
+      className={`py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Como funciona o atendimento
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Simples, rápido e eficiente
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 mb-12">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 mb-8 md:mb-12">
           {steps.map((step, index) => (
             <div 
               key={index}
@@ -55,17 +55,17 @@ const HowItWorksSection = () => {
             >
               <div className="flex flex-col items-center">
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                    <step.icon className="h-10 w-10 text-primary-foreground" />
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary flex items-center justify-center shadow-lg">
+                    <step.icon className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm font-bold text-accent-foreground">
+                  <div className="absolute -top-2 -right-2 w-7 h-7 md:w-8 md:h-8 rounded-full bg-accent flex items-center justify-center text-xs md:text-sm font-bold text-accent-foreground">
                     {step.number}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   {step.description}
                 </p>
               </div>
@@ -82,9 +82,9 @@ const HowItWorksSection = () => {
             variant="gold" 
             size="lg"
             onClick={handleWhatsAppClick}
-            className="text-lg py-6 px-8"
+            className="text-base md:text-lg py-4 px-6 md:py-6 md:px-8 min-h-[44px]"
           >
-            <MessageCircle className="h-6 w-6" />
+            <MessageCircle className="h-5 w-5 md:h-6 md:w-6" />
             Avaliar meu caso agora
           </Button>
         </div>

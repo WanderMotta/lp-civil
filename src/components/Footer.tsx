@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="bg-primary text-primary-foreground py-8 md:py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary-foreground/10">
