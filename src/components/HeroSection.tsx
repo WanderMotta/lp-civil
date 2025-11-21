@@ -12,13 +12,13 @@ const HeroSection = () => {
   return (
     <section 
       ref={ref}
-      className={`relative min-h-screen flex items-center pt-16 md:pt-20 bg-gradient-to-b from-secondary/30 to-background transition-all duration-1000 ${
+      className={`relative min-h-screen flex items-center pt-14 md:pt-16 bg-gradient-to-b from-secondary/30 to-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
+      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-4 md:space-y-6">
             <div className="space-y-3 md:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Precisa de um advogado especializado em{" "}

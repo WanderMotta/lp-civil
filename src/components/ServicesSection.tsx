@@ -72,12 +72,12 @@ const ServicesSection = () => {
     <section 
       id="services" 
       ref={ref}
-      className={`py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
+      className={`py-8 md:py-12 lg:py-16 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Como podemos te ajudar?
           </h2>
