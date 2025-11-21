@@ -13,9 +13,11 @@ import {
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, Lock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
   const [formData, setFormData] = useState({
     name: "",
     whatsapp: "",
@@ -59,7 +61,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section 
+      id="contact" 
+      ref={ref}
+      className={`py-20 bg-secondary/30 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
