@@ -56,21 +56,21 @@ const ContactSection = () => {
       message: ""
     });
   };
-  return <section id="contact" ref={ref} className={`py-20 bg-secondary/30 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  return <section id="contact" ref={ref} className={`py-12 md:py-16 lg:py-20 bg-secondary/30 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Entre em contato
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Estamos prontos para ajudá-lo
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="p-8 bg-card border-border">
-              <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+            <Card className="p-4 md:p-6 lg:p-8 bg-card border-border">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome completo *</Label>
                   <Input id="name" value={formData.name} onChange={e => setFormData({
@@ -134,8 +134,8 @@ const ContactSection = () => {
               </form>
             </Card>
 
-            <div className="space-y-6">
-              <Card className="p-6 bg-card border-border">
+            <div className="space-y-4 md:space-y-6">
+              <Card className="p-4 md:p-6 bg-card border-border">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Lock className="h-6 w-6 text-primary" />
@@ -151,7 +151,7 @@ const ContactSection = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-card border-border">
+              <Card className="p-4 md:p-6 bg-card border-border">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
@@ -170,7 +170,7 @@ const ContactSection = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-card border-border">
+              <Card className="p-4 md:p-6 bg-card border-border">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary" />

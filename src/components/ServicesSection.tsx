@@ -72,32 +72,32 @@ const ServicesSection = () => {
     <section 
       id="services" 
       ref={ref}
-      className={`py-20 bg-background transition-all duration-1000 ${
+      className={`py-12 md:py-16 lg:py-20 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Como podemos te ajudar?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Oferecemos soluções jurídicas completas em Direito Civil e de Família
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card"
+              className="p-4 md:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <service.icon className="h-6 w-6 text-primary" />
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground">
                     {service.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
