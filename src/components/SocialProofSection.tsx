@@ -16,7 +16,7 @@ const stats = [
   {
     icon: Shield,
     value: "Êxito",
-    label: "Casos resolvidos"
+    label: "100% Online"
   },
   {
     icon: Star,
