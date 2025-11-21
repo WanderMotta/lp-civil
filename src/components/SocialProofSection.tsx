@@ -27,7 +27,7 @@ const stats = [
 
 const testimonials = [
   {
-    name: "Maria Silva",
+    name: "Mariana Leite",
     text: "Excelente atendimento! Resolveram meu processo de divórcio de forma rápida e sem complicações. Recomendo!",
     rating: 5
   },
