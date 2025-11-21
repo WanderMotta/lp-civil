@@ -32,7 +32,7 @@ const testimonials = [
     rating: 5
   },
   {
-    name: "João Santos",
+    name: "Pedro Vasconcelos",
     text: "Profissionais competentes e atenciosos. Me ajudaram com a guarda do meu filho e pensão alimentícia. Muito satisfeito!",
     rating: 5
   },
