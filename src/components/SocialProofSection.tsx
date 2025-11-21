@@ -53,12 +53,12 @@ const SocialProofSection = () => {
   return (
     <section 
       ref={ref}
-      className={`py-12 md:py-16 lg:py-20 bg-secondary/30 transition-all duration-1000 ${
+      className={`py-8 md:py-12 lg:py-16 bg-secondary/30 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Por que nos escolher?
           </h2>
@@ -67,7 +67,7 @@ const SocialProofSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-10">
           {stats.map((stat, index) => (
             <Card 
               key={index}
@@ -89,7 +89,7 @@ const SocialProofSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-center">
             O que nossos clientes dizem
           </h3>
           <div className="grid md:grid-cols-3 gap-4 md:gap-6">
