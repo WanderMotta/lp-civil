@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 
 const Header = () => {
-  const whatsappNumber = "5511999999999"; // Replace with actual number
-  const phoneNumber = "(11) 99999-9999"; // Replace with actual number
+  const whatsappNumber = "551196947374";
+  const phoneNumber = "(11) 99694-7374";
   
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${whatsappNumber}`, "_blank");
