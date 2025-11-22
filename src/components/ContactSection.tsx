@@ -40,7 +40,7 @@ const ContactSection = () => {
 
     // Create WhatsApp message
     const message = `Olá! Meu nome é ${formData.name}.\n\nTipo de caso: ${formData.caseType}\n\n${formData.message}\n\nE-mail: ${formData.email}`;
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/551196947374?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
     toast({
       title: "Redirecionando...",
@@ -84,7 +84,7 @@ const ContactSection = () => {
                   <Input id="whatsapp" type="tel" value={formData.whatsapp} onChange={e => setFormData({
                   ...formData,
                   whatsapp: e.target.value
-                })} placeholder="(11) 99999-9999" required />
+                })} placeholder="(11) 99694-7374" required />
                 </div>
 
                 <div className="space-y-2">
@@ -163,8 +163,8 @@ const ContactSection = () => {
                     <p className="text-sm text-muted-foreground mb-3">
                       Nossa equipe responde rapidamente para avaliar seu caso e oferecer as melhores soluções.
                     </p>
-                    <a href="tel:5511999999999" className="text-sm font-medium text-primary hover:underline">
-                      (11) 99999-9999
+                    <a href="tel:551196947374" className="text-sm font-medium text-primary hover:underline">
+                      (11) 99694-7374
                     </a>
                   </div>
                 </div>

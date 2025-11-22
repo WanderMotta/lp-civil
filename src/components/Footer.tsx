@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              <li>WhatsApp: (11) 99999-9999</li>
+              <li>WhatsApp: (11) 99694-7374</li>
               <li>Email: contato@direitocivil.com.br</li>
               <li>Atendimento 100% Online</li>
             </ul>

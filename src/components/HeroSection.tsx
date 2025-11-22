@@ -6,7 +6,7 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 const HeroSection = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.2 });
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999", "_blank");
+    window.open("https://wa.me/551196947374", "_blank");
   };
 
   return (

@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999", "_blank");
+    window.open("https://wa.me/551196947374", "_blank");
   };
 
   return (
