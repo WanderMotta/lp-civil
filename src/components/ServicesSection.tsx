@@ -1,11 +1,13 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { 
   Heart, 
   Users, 
   Baby, 
   DollarSign, 
   FileText, 
-  Gift
+  Gift,
+  MessageCircle
 } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
@@ -50,6 +52,10 @@ const services = [
 const ServicesSection = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/551196947374", "_blank");
+  };
+
   return (
     <section 
       id="services" 
@@ -89,6 +95,22 @@ const ServicesSection = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* CTA WhatsApp */}
+        <div className="text-center mt-8 md:mt-10 lg:mt-12">
+          <p className="text-muted-foreground mb-4 text-base md:text-lg">
+            Precisa de ajuda com algum desses serviços?
+          </p>
+          <Button 
+            variant="whatsapp" 
+            size="lg"
+            onClick={handleWhatsAppClick}
+            className="text-base md:text-lg py-4 px-6 md:py-6 md:px-8 min-h-[44px]"
+          >
+            <MessageCircle className="h-5 w-5 md:h-6 md:w-6" />
+            Falar com um Especialista
+          </Button>
         </div>
       </div>
     </section>
