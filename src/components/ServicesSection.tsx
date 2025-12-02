@@ -60,7 +60,7 @@ const ServicesSection = () => {
     <section 
       id="services" 
       ref={ref}
-      className={`py-6 md:py-8 lg:py-12 bg-background transition-all duration-1000 ${
+      className={`py-4 md:py-6 lg:py-8 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
@@ -98,7 +98,7 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA WhatsApp */}
-        <div className="text-center mt-8 md:mt-10 lg:mt-12">
+        <div className="text-center mt-6 md:mt-8 lg:mt-10">
           <p className="text-muted-foreground mb-4 text-base md:text-lg">
             Precisa de ajuda com algum desses serviços?
           </p>
