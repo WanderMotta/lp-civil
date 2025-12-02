@@ -56,7 +56,7 @@ const ContactSection = () => {
       message: ""
     });
   };
-  return <section id="contact" ref={ref} className={`py-8 md:py-12 lg:py-16 bg-secondary/30 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  return <section id="contact" ref={ref} className={`py-6 md:py-8 lg:py-12 bg-secondary/30 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 md:mb-10 lg:mb-12">
