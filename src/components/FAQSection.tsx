@@ -42,10 +42,6 @@ const FAQSection = () => {
       answer: "Sim, oferecemos condições especiais de parcelamento para facilitar o acesso à justiça.",
     },
     {
-      question: "Vocês atendem em todo o Brasil?",
-      answer: "Sim! Com atendimento online, podemos atender clientes de qualquer estado do país.",
-    },
-    {
       question: "Como sei se meu caso tem chances de sucesso?",
       answer:
         "Na avaliação gratuita, nossos advogados analisam seu caso e apresentam as possibilidades e estratégias jurídicas aplicáveis.",
