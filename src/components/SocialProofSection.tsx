@@ -53,12 +53,12 @@ const SocialProofSection = () => {
   return (
     <section 
       ref={ref}
-      className={`py-6 md:py-8 lg:py-12 bg-secondary/30 transition-all duration-1000 ${
+      className={`py-4 md:py-6 lg:py-8 bg-secondary/30 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+        <div className="text-center mb-6 md:mb-8 lg:mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             Por que nos escolher?
           </h2>
