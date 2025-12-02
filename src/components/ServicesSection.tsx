@@ -5,9 +5,6 @@ import {
   Baby, 
   DollarSign, 
   FileText, 
-  Search, 
-  UserCheck, 
-  FileSignature,
   Gift
 } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
@@ -42,21 +39,6 @@ const services = [
     icon: FileText,
     title: "Inventário",
     description: "Organizamos a herança por via judicial ou extrajudicial, com partilha justa e solução ágil."
-  },
-  {
-    icon: Search,
-    title: "Investigação de paternidade",
-    description: "Confirmamos ou contestamos vínculos biológicos, garantindo direitos de pais e filhos."
-  },
-  {
-    icon: UserCheck,
-    title: "Reconhecimento e dissolução de paternidade socioafetiva",
-    description: "Regulamos juridicamente vínculos de afeto, com foco na realidade familiar e no melhor interesse do filho."
-  },
-  {
-    icon: FileSignature,
-    title: "Acordos de convivência ou pré-nupciais",
-    description: "Criamos contratos claros para organizar responsabilidades e resguardar bens do casal."
   },
   {
     icon: Gift,
