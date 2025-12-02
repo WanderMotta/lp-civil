@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
   Heart, 
-  Users, 
   Baby, 
   DollarSign, 
   FileText, 
@@ -16,11 +15,6 @@ const services = [
     icon: Heart,
     title: "Divórcio",
     description: "Encerramos o casamento de forma rápida e segura, consensual ou litigiosa, protegendo seus direitos e evitando desgaste desnecessário."
-  },
-  {
-    icon: Users,
-    title: "Separação de corpos",
-    description: "Medida imediata para afastar os cônjuges e garantir proteção jurídica até a conclusão do divórcio."
   },
   {
     icon: Heart,
