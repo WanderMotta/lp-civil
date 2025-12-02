@@ -61,10 +61,6 @@ const HeroSection = () => {
                 Ver Serviços
               </Button>
             </div>
-
-            <p className="text-sm text-muted-foreground italic">
-              Resolvemos com agilidade e segurança. Atendimento rápido, 100% ONLINE e sigiloso.
-            </p>
           </div>
 
           <div className="relative hidden lg:block">
