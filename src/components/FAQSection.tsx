@@ -51,7 +51,7 @@ const FAQSection = () => {
   return (
     <section
       ref={ref}
-      className={`py-12 md:py-16 lg:py-20 px-4 md:px-6 bg-muted/30 transition-all duration-700 ${
+      className={`py-6 md:py-8 lg:py-12 px-4 md:px-6 bg-muted/30 transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
