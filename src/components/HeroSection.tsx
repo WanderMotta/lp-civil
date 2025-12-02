@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section 
       ref={ref}
-      className={`relative min-h-screen flex items-center pt-14 md:pt-16 bg-gradient-to-b from-secondary/30 to-background transition-all duration-1000 ${
+      className={`relative flex items-center pt-14 md:pt-16 bg-gradient-to-b from-secondary/30 to-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
